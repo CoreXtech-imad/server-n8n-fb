@@ -13,7 +13,7 @@ const N8N_WEBHOOK = 'https://n8n-render-e6ze.onrender.com/webhook/5e59b49c-1386-
 // -----------------------------------
 // 1️⃣ GET /webhook → Meta Verification
 // -----------------------------------
-app.get('/webhook', (req, res) => {
+app.get('/webhook/5e59b49c-1386-4ea7-baf3-ad052464e0f1', (req, res) => {
   const mode = req.query['hub.mode'];
   const token = req.query['hub.verify_token'];
   const challenge = req.query['hub.challenge'];
@@ -30,7 +30,7 @@ app.get('/webhook', (req, res) => {
 // -----------------------------------
 // 2️⃣ POST /webhook → Forward messages to n8n
 // -----------------------------------
-app.post('/webhook', async (req, res) => {
+app.post('/webhook/5e59b49c-1386-4ea7-baf3-ad052464e0f1', async (req, res) => {
   try {
     // Log incoming event (optional)
     console.log('Incoming event:', req.body);
@@ -56,3 +56,4 @@ app.get('/', (req, res) => res.send('SERVER OK'));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
