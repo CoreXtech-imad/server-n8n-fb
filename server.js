@@ -8,7 +8,7 @@ app.use(express.json());
 // 🔹 CONFIG
 // ================================
 const N8N_WEBHOOK =
-  "https://n8n-render-e6ze.onrender.com/webhook/5e59b49c-1386-4ea7-baf3-ad052464e0f1";
+  "https://n8n-render-e6ze.onrender.com/webhook/imadtest";
 
 const VERIFY_TOKEN = process.env.VERIFY_TOKEN; // set in Render ENV: imad1234
 
@@ -63,3 +63,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
